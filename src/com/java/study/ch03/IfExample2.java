@@ -5,7 +5,7 @@ public class IfExample2 {
 	public static void main(String[] args) {
 		
 		int vipClass= 5;
-		double price = 20000;
+		double price = 35000;
 		int sale;
 		double afterSale;
 		
