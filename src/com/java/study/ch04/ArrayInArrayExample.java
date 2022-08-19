@@ -57,6 +57,22 @@ public class ArrayInArrayExample {
 			System.out.println(subject[j]+" 과목의 평균 점수는: "+((double)sum/5));
 		}
 		
+		//2 (1) 선생님 방법
+		// 국어 영어 수학의 점수들을 모을 각각의 sum 값을 배열로 선언
+		
+		System.out.println("--------------Teacher style!!!!----------------");
+		int[] sum2 = new int[3]; //sum2[0] 국어점수의 합, sum2[1] 영어점수의 합, sum2[2] 수학점수의 합
+		
+		for(int i =0; i<scores.length; i++) {
+			for(int j=0; j<scores[i].length; j++) {
+				sum2[j] +=scores[i][j];
+			}
+		}
+		
+		for(int i=0;i<sum2.length; i++) {
+			System.out.println(subject[i]+" 과목의 평균 점수는: "+((double)sum2[i]/scores.length));
+		}
+		
 		
 	}
 
