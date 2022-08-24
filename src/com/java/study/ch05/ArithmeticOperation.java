@@ -33,4 +33,18 @@ public class ArithmeticOperation {
 		System.out.println(a+": "+b);
 	}
 	
+	public String aaa(int a) {
+		return "";
+	}
+	public boolean bbb(int a) {
+		return true;
+	}
+	public double ccc(int a) {
+		return 1.1;
+	}
+	public void ddd(int a) {
+	}
+	static void staticTest() {
+		System.out.println("I'm the Legend");
+	}
 }

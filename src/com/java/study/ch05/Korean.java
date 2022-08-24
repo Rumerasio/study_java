@@ -23,4 +23,17 @@ public class Korean {
 		this.age=age;
 	}
 	
+	static int staticTest (int a) {
+		return a=a+10;
+	}
+	
+	int ttest() {
+		ArithmeticOperation arithmetic = new ArithmeticOperation();
+		arithmetic.aaa(12);
+		
+		return 1;
+	}
+	public void ttest2() {
+		ArithmeticOperation.staticTest();
+	}
 }
