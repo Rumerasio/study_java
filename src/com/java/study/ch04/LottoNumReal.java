@@ -1038,7 +1038,110 @@ public class LottoNumReal {
 				{9,13,21,25,32,42},
 				{10,23,29,33,37,40}};
 		
-		while(IsSame == true ||IsHistory == true || IsSeries == true) {
+//		while(IsSame == true ||IsHistory == true || IsSeries == true) {
+//			//뽑기
+//			for(int i=0;i<lottoNum.length;i++) {
+//				lottoNum[i]= (int)(Math.random()*44+1);
+//			}
+//			//오름차순 정렬
+//			for(int i =0; i<lottoNum.length; i++) {
+//				for(int j=i+1; j<lottoNum.length; j++) {
+//					if(lottoNum[i]>lottoNum[j]) {
+//						blank = lottoNum[i];
+//						lottoNum[i]=lottoNum[j];
+//						lottoNum[j]=blank;
+//					}
+//				}
+//			}
+//			// 판단 시작
+//			// 중복 숫자
+//			for(int i=0; i<lottoNum.length-1;i++) {				// lottoNum 0~4 
+//				for(int j =i+1; j<lottoNum.length;j++) {			// lottoNum 1~5 비교 
+//					if(lottoNum[i]==lottoNum[j]) {				// 같은게 있으면 다시 뽑아
+//						for(int x=0;x<lottoNum.length;x++) {
+//							System.out.print(lottoNum[x]+" ");
+//						}
+//						System.out.println("중복된 숫자가 있습니다. 다시뽑겠습니다");
+//						IsSame=true;
+//						for(int y=0;y<lottoNum.length;y++) {
+//							lottoNum[y]= (int)(Math.random()*44+1);
+//						}
+//						for(int z =0; z<lottoNum.length; z++) {
+//							for(int m=z+1; m<lottoNum.length; m++) {
+//								if(lottoNum[z]>lottoNum[m]) {
+//									blank = lottoNum[z];
+//									lottoNum[z]=lottoNum[m];
+//									lottoNum[m]=blank;
+//								}
+//							}
+//						}
+//					} else {
+//						IsSame=false;
+//					}
+//				}
+//			}
+//			// 2-2 3연속 숫자 판별
+//			for(int i=0; i<lottoNum.length-2; i++) {
+//				if(lottoNum[i]+1==lottoNum[i+1] && lottoNum[i]+2==lottoNum[i+2]) {
+//					for(int x=0;x<lottoNum.length;x++) {
+//						System.out.print(lottoNum[x]+" ");
+//					}
+//					System.out.println("3연속 숫자입니다. 다시뽑겠습니다");
+//					for(int y=0;y<lottoNum.length;y++) {
+//						lottoNum[y]= (int)(Math.random()*44+1);
+//					}
+//					for(int z =0; z<lottoNum.length; z++) {
+//						for(int j=i+1; j<lottoNum.length; j++) {
+//							if(lottoNum[i]>lottoNum[j]) {
+//								blank = lottoNum[i];
+//								lottoNum[i]=lottoNum[j];
+//								lottoNum[j]=blank;
+//							}
+//						}
+//					}
+//					IsSeries=true;
+//				} else {
+//					IsSeries=false;
+//				}
+//			}
+//			//과거내역과 비교
+//			for(int i=0; i<lottoNumHistory.length; i++) {
+//				if(lottoNum[0] ==lottoNumHistory[i][0] && lottoNum[1] ==lottoNumHistory[i][1] && lottoNum[2] ==lottoNumHistory[i][2] && lottoNum[3] ==lottoNumHistory[i][3] && lottoNum[4] ==lottoNumHistory[i][4] && lottoNum[5] ==lottoNumHistory[i][5]) {
+//					for(int x=0;x<lottoNum.length;x++) {
+//						System.out.print(lottoNum[x]+" ");
+//					}
+//					System.out.println("과거내역에 동일한 번호가 있었습니다.");
+//					for(int y=0;y<lottoNum.length;y++) {
+//						lottoNum[y]= (int)(Math.random()*44+1);
+//					}
+//					for(int z =0; z<lottoNum.length; z++) {
+//						for(int j=i+1; j<lottoNum.length; j++) {
+//							if(lottoNum[i]>lottoNum[j]) {
+//								blank = lottoNum[i];
+//								lottoNum[i]=lottoNum[j];
+//								lottoNum[j]=blank;
+//							}
+//						}
+//					}
+//					IsHistory=true;
+//				} else {
+//					IsHistory=false;
+//				}
+//			}
+//		}
+//		//뽑은거 확인
+//		
+//		for(int i=0;i<lottoNum.length;i++) {
+//			System.out.print(lottoNum[i]+" ");
+//		}
+//		System.out.println();
+//		
+//		
+		
+		// ---------------정리----------------- 
+		System.out.println("***************new**************");
+		
+		while(IsSame ==true || IsSeries ==true || IsHistory ==true) {
 			//뽑기
 			for(int i=0;i<lottoNum.length;i++) {
 				lottoNum[i]= (int)(Math.random()*44+1);
@@ -1053,28 +1156,20 @@ public class LottoNumReal {
 					}
 				}
 			}
-			// 판단 시작
 			// 중복 숫자
-			for(int i=0; i<lottoNum.length-1;i++) {				// lottoNum 0~4 
-				for(int j =i+1; j<lottoNum.length;j++) {			// lottoNum 1~5 비교 
-					if(lottoNum[i]==lottoNum[j]) {				// 같은게 있으면 다시 뽑아
-						for(int x=0;x<lottoNum.length;x++) {
-							System.out.print(lottoNum[x]+" ");
+			for(int i=0; i<lottoNum.length-1;i++) {				
+				for(int j =i+1; j<lottoNum.length;j++) {			
+					if(lottoNum[i]==lottoNum[j]) {	
+						for(int k=0;k<lottoNum.length;k++) {
+							System.out.print(lottoNum[k]+" ");
 						}
-						System.out.println("중복된 숫자가 있습니다. 다시뽑겠습니다");
+						System.out.println();
+						System.out.println("중복된 숫자가 있습니다.");
 						IsSame=true;
-						for(int y=0;y<lottoNum.length;y++) {
-							lottoNum[y]= (int)(Math.random()*44+1);
+						for(int x=0;x<lottoNum.length;x++) {
+							lottoNum[x]= (int)(Math.random()*44+1);
 						}
-						for(int z =0; z<lottoNum.length; z++) {
-							for(int m=z+1; m<lottoNum.length; m++) {
-								if(lottoNum[z]>lottoNum[m]) {
-									blank = lottoNum[z];
-									lottoNum[z]=lottoNum[m];
-									lottoNum[m]=blank;
-								}
-							}
-						}
+						
 					} else {
 						IsSame=false;
 					}
@@ -1083,23 +1178,14 @@ public class LottoNumReal {
 			// 2-2 3연속 숫자 판별
 			for(int i=0; i<lottoNum.length-2; i++) {
 				if(lottoNum[i]+1==lottoNum[i+1] && lottoNum[i]+2==lottoNum[i+2]) {
-					for(int x=0;x<lottoNum.length;x++) {
-						System.out.print(lottoNum[x]+" ");
+					for(int j=0;j<lottoNum.length;j++) {
+						System.out.print(lottoNum[j]+" ");
 					}
-					System.out.println("3연속 숫자입니다. 다시뽑겠습니다");
-					for(int y=0;y<lottoNum.length;y++) {
-						lottoNum[y]= (int)(Math.random()*44+1);
-					}
-					for(int z =0; z<lottoNum.length; z++) {
-						for(int j=i+1; j<lottoNum.length; j++) {
-							if(lottoNum[i]>lottoNum[j]) {
-								blank = lottoNum[i];
-								lottoNum[i]=lottoNum[j];
-								lottoNum[j]=blank;
-							}
-						}
-					}
+					System.out.println("3연속으로 숫자가 있습니다.");
 					IsSeries=true;
+					for(int x=0;x<lottoNum.length;x++) {
+						lottoNum[x]= (int)(Math.random()*44+1);
+					}
 				} else {
 					IsSeries=false;
 				}
@@ -1107,35 +1193,33 @@ public class LottoNumReal {
 			//과거내역과 비교
 			for(int i=0; i<lottoNumHistory.length; i++) {
 				if(lottoNum[0] ==lottoNumHistory[i][0] && lottoNum[1] ==lottoNumHistory[i][1] && lottoNum[2] ==lottoNumHistory[i][2] && lottoNum[3] ==lottoNumHistory[i][3] && lottoNum[4] ==lottoNumHistory[i][4] && lottoNum[5] ==lottoNumHistory[i][5]) {
-					for(int x=0;x<lottoNum.length;x++) {
-						System.out.print(lottoNum[x]+" ");
+					for(int j=0;j<lottoNum.length;j++) {
+						System.out.print(lottoNum[j]+" ");
 					}
 					System.out.println("과거내역에 동일한 번호가 있었습니다.");
-					for(int y=0;y<lottoNum.length;y++) {
-						lottoNum[y]= (int)(Math.random()*44+1);
-					}
-					for(int z =0; z<lottoNum.length; z++) {
-						for(int j=i+1; j<lottoNum.length; j++) {
-							if(lottoNum[i]>lottoNum[j]) {
-								blank = lottoNum[i];
-								lottoNum[i]=lottoNum[j];
-								lottoNum[j]=blank;
-							}
-						}
-					}
 					IsHistory=true;
+					for(int x=0;x<lottoNum.length;x++) {
+						lottoNum[x]= (int)(Math.random()*44+1);
+					}
 				} else {
 					IsHistory=false;
 				}
 			}
 		}
-		//뽑은거 확인
-		
+		System.out.println("검증이 끝났습니다. 최종적으로 번호를 안내합니다.");
+		for(int i =0; i<lottoNum.length; i++) {
+			for(int j=i+1; j<lottoNum.length; j++) {
+				if(lottoNum[i]>lottoNum[j]) {
+					blank = lottoNum[i];
+					lottoNum[i]=lottoNum[j];
+					lottoNum[j]=blank;
+				}
+			}
+		}
 		for(int i=0;i<lottoNum.length;i++) {
 			System.out.print(lottoNum[i]+" ");
 		}
 		System.out.println();
-		
 	}
 
 }
