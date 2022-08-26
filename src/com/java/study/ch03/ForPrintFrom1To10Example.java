@@ -1,7 +1,5 @@
 package com.java.study.ch03;
 
-import java.util.Iterator;
-
 public class ForPrintFrom1To10Example {
 
 	public static void main(String[] args) {

@@ -12,6 +12,7 @@ public class StudentExample {
 		
 		System.out.println("성명: "+student2.name+", 주민번호: "+student2.ssn+", 학번: "+student2.studentNo);
 		
+		System.out.println("-----");
 	}
 
 }
